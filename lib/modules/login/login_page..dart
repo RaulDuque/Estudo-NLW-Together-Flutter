@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:payflow/MODULOS/login/login_controller.dart';
+import 'package:payflow/modules/login/login_controller.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_images.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
@@ -31,17 +31,16 @@ class _LoginPageState extends State<LoginPage> {
               color: AppColors.primary,
             ),
             Positioned(
-              top: 40,
-              left: 0,
-              right: 0,
-              child: Image.asset(
-                AppImages.person,
-                width: 208,
-                height: 300,
-              ),
-            ),
+                top: 40,
+                left: 0,
+                right: 0,
+                child: Image.asset(
+                  AppImages.person,
+                  width: 208,
+                  height: 300,
+                )),
             Positioned(
-              bottom: size.height * 0.12,
+              bottom: size.height * 0.05,
               left: 0,
               right: 0,
               child: Column(
@@ -53,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding:
                         const EdgeInsets.only(top: 30, left: 70, right: 70),
                     child: Text(
-                      "Organizando todos os seus boletos",
+                      "Organize seus boletos em um só lugar",
                       textAlign: TextAlign.center,
                       style: TextStyles.titleHome,
                     ),
@@ -61,15 +60,15 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding:
                         const EdgeInsets.only(left: 40, right: 40, top: 40),
-                    child: SociaLoginButton(
+                    child: SocialLoginButton(
                       onTap: () {
                         controller.googleSignIn(context);
                       },
                     ),
-                  ),
+                  )
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),

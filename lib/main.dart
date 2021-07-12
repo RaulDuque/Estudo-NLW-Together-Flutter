@@ -23,7 +23,7 @@ class _AppFirebaseState extends State<AppFirebase> {
             return Material(
               child: Center(
                 child: Text(
-                  "Não foi possível inicializar o FireBase",
+                  "Não foi possível inicializar o Firebase",
                   textDirection: TextDirection.ltr,
                 ),
               ),

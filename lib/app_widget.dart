@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/MODULOS/home/home_page.dart';
-import 'package:payflow/MODULOS/splash/splash_page.dart';
-import 'MODULOS/login/login_page..dart';
+import 'package:payflow/modules/home/home_page.dart';
+import 'package:payflow/modules/splash/splash_page.dart';
+import 'modules/login/login_page..dart';
 import 'shared/themes/app_colors.dart';
 
 class AppWidget extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +14,7 @@ class AppWidget extends StatelessWidget {
       routes: {
         "/splash": (context) => SplashPage(),
         "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
+        "/login": (context) => LoginPage()
       },
     );
   }
