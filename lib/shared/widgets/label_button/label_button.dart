@@ -4,10 +4,12 @@ import 'package:payflow/shared/themes/app_text_styles.dart';
 class LabelButton extends StatelessWidget {
   final String label;
   final VoidCallback onePressed;
+  final TextStyle? style;
   const LabelButton({
     Key? key,
     required this.label,
     required this.onePressed,
+    this.style,
   }) : super(key: key);
 
   @override
@@ -18,7 +20,7 @@ class LabelButton extends StatelessWidget {
         onPressed: onePressed,
         child: Text(
           label,
-          style: TextStyles.buttonHeading,
+          style: style ?? TextStyles.buttonHeading,
         ),
       ),
     );
